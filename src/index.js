@@ -14,7 +14,8 @@ function createWindow() {
     autoHideMenuBar: true,
     frame: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      nodeIntegrationInWorker: true
     }
   });
   win.loadFile(path.join(__dirname, "/index.html"));

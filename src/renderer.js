@@ -7,9 +7,7 @@ const request = require("request");
 const onezip = require("onezip");
 const glob = require("glob");
 const progress = require("progress-stream");
-const cmd = require("node-cmd");
-const { spawn, exec, execFile } = require("child_process");
-const PowerShell = require("node-powershell");
+const { execFile } = require("child_process");
 
 const downloadsPath = path.resolve(__dirname, "../downloadedFirmwares");
 const unzipPath = path.resolve(__dirname, "../extractedFirmwares");

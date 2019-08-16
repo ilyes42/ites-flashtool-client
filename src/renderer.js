@@ -124,6 +124,7 @@ function handleDownload(filename) {
           extract.on("end", () => {
             updateStatus("Extract finished!");
             checkLocalFirms();
+            handleFlash(firmwarePath, path.basename(filename));
           });
         });
     }
@@ -139,6 +140,7 @@ function handleFlash(firmwarePath, firmwareName) {
   }
   currentFirmware = firmwarePath;
   $("#start-flash").attr("disabled", false);
+  flash(currentFirmware);
 }
 
 function formCheck(el) {
